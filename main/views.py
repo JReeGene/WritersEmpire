@@ -5,7 +5,7 @@ from .forms import NewUserForm, UserForm, ProfileForm, VoteForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
-from django.views.generic import ListView #Individual Product
+from django.views.generic import ListView 
 
 # Create your views here.
 def homepage(request):
@@ -31,7 +31,7 @@ def products(request):
 				product_id = request.POST.get("product")
 				form.product = Product.objects.get(id=product_id)
 				form.save()
-				form.calculate_averages()  #add this
+				form.calculate_averages() 
 				messages.success(request,(f'{form.product} product score submitted.'))
 				return redirect ("main:products")
 			messages.error(request,('Form is invalid.'))

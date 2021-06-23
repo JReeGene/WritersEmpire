@@ -42,17 +42,17 @@ class Profile(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
 	products = models.ManyToManyField(Product)
 
-	@receiver(post_save, sender=User) #add this
+	@receiver(post_save, sender=User) 
 	def create_user_profile(sender, instance, created, **kwargs):
 		if created:
 			Profile.objects.create(user=instance)
 
-	@receiver(post_save, sender=User) #add this
+	@receiver(post_save, sender=User) 
 	def save_user_profile(sender, instance, **kwargs):
 		instance.profile.save()
 
 
-class Vote(models.Model):   #add this class and the following fields
+class Vote(models.Model):   
 	profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
 	product = models.ForeignKey(Product, on_delete=models.CASCADE)
 	comfort = models.IntegerField(default=0)
