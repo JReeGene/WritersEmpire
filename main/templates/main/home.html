@@ -13,7 +13,7 @@
 				{% if user.is_authenticated %}
 				<a class="btn btn-primary mt-2" href="/user">VIEW WISHLIST</a>
 				{% else %}
-				<a class="btn btn-primary mt-2" href="/products">GRAB YOUR TOOLS</a>
+				<a class="btn btn-primary mt-2" href="/products">OUR ASSORTED PRODUCTS</a>
 				{% endif %}
 			</div>
 		</div>
@@ -139,30 +139,5 @@
 		<a href="/blog/articles">View more</a>
 	</div>
 </div>
-
-<style>
-	.cta-banner {
-		background-image:
-		/* The image fade to white */
-		linear-gradient( to left, rgba(0,0,0,0) 10%, #fff 85%),
-		/* The image used */
-		url("{% static 'img/cta-headphones.jpg' %}");
-		/* Set a specific height */
-		height:400px;
-		/* Create the parallax scrolling effect */
-		background-attachment: fixed;
-		background-position: center bottom;
-		background-repeat: no-repeat;
-		background-size: cover;
-		z-index: auto;
-		position: relative;
-	}
-
-	@media only screen and (max-width:600px) {
-		.cta-message {font-size:50px !important;
-		}
-	</style>
-
-
 	{% endblock %}
 
