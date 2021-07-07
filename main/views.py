@@ -1,5 +1,5 @@
 from django.shortcuts import  render, redirect
-from .models import Product, Article, Tag
+from .models import Product, Article, Tag, Profile
 from django.core.paginator import Paginator
 from .forms import NewUserForm, UserForm, ProfileForm, VoteForm
 from django.contrib.auth import login, authenticate, logout
@@ -54,7 +54,7 @@ class ProductList(ListView):
 
 def productdetail(request,id):
     product = Product.objects.get(id = id)
-    return render(request, 'myapp/product.html', {'product': product})
+    return render(request, 'main/product.html', {'product': product})
 
 def register(request):
 	if request.method == "POST":
@@ -85,6 +85,7 @@ def login_request(request):
 			messages.error(request,"Invalid username or password.")
 	form = AuthenticationForm()
 	return render(request=request, template_name="main/login.html", context={"form":form})
+
 
 def logout_request(request):
 	logout(request)

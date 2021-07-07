@@ -1,8 +1,8 @@
 from django.db import models
 from tinymce.models import HTMLField
 from django.contrib.auth.models import User
-from django.dispatch import receiver #add this
-from django.db.models.signals import post_save #add this
+from django.dispatch import receiver 
+from django.db.models.signals import post_save 
 from django.db.models import Sum
 from datetime import datetime
 
@@ -70,3 +70,12 @@ class Vote(models.Model):
 			product.performance_average = performance_total['performance__sum']/vote_count
 			product.durability_average = durability_total['durability__sum']/vote_count
 			product.save()
+
+
+class Room(models.Model):
+    name = models.CharField(max_length=1000)
+class Message(models.Model):
+    value = models.CharField(max_length=1000000)
+    date = models.DateTimeField(default=datetime.now, blank=True)
+    user = models.CharField(max_length=1000000)
+    room = models.CharField(max_length=1000000)

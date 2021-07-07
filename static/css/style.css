@@ -1,19 +1,77 @@
+body{
+    font-family: 'Ubuntu', sans-serif !important;
+}
+
 .cta-banner {
-    background-image:
-    /* The image fade to white */
-    linear-gradient( to right, rgba(0,0,0,0) 10%, #fff 95%),
-    /* The image used */
-    url("/static/img/Bg.jpg");
-    /* Set a specific height */
-    height:400px;
-    /* Create the parallax scrolling effect */
+    background-image:linear-gradient( to right, rgba(11, 11, 11, 1) 5%, #fff 95%), url("/static/img/Bg.jpg");
+    height:300px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    color: 	rgb(240, 173, 78);
     background-attachment: fixed;
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: auto;
     position: relative;
+    @media only screen and (max-width:600px) {
+        .cta-message {
+            font-size:10px !important;
+        } 
 }
-@media only screen and (max-width:600px) {
-    .cta-message {font-size:50px !important;
-    }
+}
+.cta-message{
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    overflow: hidden; 
+    border-right: .20em solid rgb(8, 8, 8); 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    animation:
+        typing 2.5s steps(80, end),
+        blink-caret .75s 
+        step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+  }
+
+  .dark-blue{
+      color: #283747 !important;
+  }
+
+  .icon-item{
+      color: white;
+      text-decoration: none;
+      margin: 2px;
+      font-size: 20px;
+  }
+
+  
+  .dark-btn{
+      position: relative;
+      right:-850px;
+      text-decoration:none;
+      border:none;
+      border-radius:2px;
+      background-color: black;
+      color:white;
+      width:255px;
+  
+  }
+.btn-txt{
+    font-size:10px;
+    padding:2px;
+}
+
+.test-button{
+    position:absolute;
+    top:0;
+}

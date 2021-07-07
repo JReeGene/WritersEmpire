@@ -2,9 +2,9 @@ from django.urls import path
 from . import views
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.views.generic.base import RedirectView
-from main.views import ProductList, productdetail#Individual
+from main.views import ProductList, productdetail
 
-app_name = "main"   
+app_name = "main"
 
 
 urlpatterns = [
