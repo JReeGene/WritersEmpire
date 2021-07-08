@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'main.apps.MainConfig',
     'django.contrib.admin',
     'django.contrib.auth',
-    "social_django",
+    #"social_django",
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -50,10 +50,10 @@ INSTALLED_APPS = [
 
 AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
-    "social_core.backends.github.GithubOAuth2",
+    #"social_core.backends.github.GithubOAuth2",
 ]
-SOCIAL_AUTH_GITHUB_KEY = os.environ.get("daee5d804154136bd784")
-SOCIAL_AUTH_GITHUB_SECRET = os.environ.get("0ba748d91380c934d8343b34a4f9bdd684dc7a96")
+#SOCIAL_AUTH_GITHUB_KEY = os.environ.get("daee5d804154136bd784")
+#SOCIAL_AUTH_GITHUB_SECRET = os.environ.get("0ba748d91380c934d8343b34a4f9bdd684dc7a96")
 
 TINYMCE_DEFAULT_CONFIG = {
     'height': 400,
@@ -119,8 +119,8 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'main.context_processors.menu',
-                "social_django.context_processors.backends",
-                "social_django.context_processors.login_redirect",
+                #"social_django.context_processors.backends",
+                #"social_django.context_processors.login_redirect",
             ],
         },
     },

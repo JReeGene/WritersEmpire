@@ -24,6 +24,7 @@ body{
     padding: 0;
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
+    text-shadow: 2px 2px orange;
     overflow: hidden; 
     border-right: .20em solid rgb(8, 8, 8); 
     white-space: nowrap; 
@@ -36,11 +37,12 @@ body{
 
 @keyframes typing {
     from { width: 0 }
-    to { width: 100% }
+    to { width: 100%; text-shadow: 2px 2px orange; }
   }
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: white; }
+    50% { border-color:whitesmoke;
+        text-shadow: 2px 2px orange; }
   }
 
   .dark-blue{
@@ -48,7 +50,7 @@ body{
   }
 
   .icon-item{
-      color: white;
+      color: whitesmoke;
       text-decoration: none;
       margin: 2px;
       font-size: 20px;
@@ -74,4 +76,7 @@ body{
 .test-button{
     position:absolute;
     top:0;
+}
+.card-body{
+    box-shadow: 1px 1px 0px 0px grey;
 }
