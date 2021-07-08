@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'main.apps.MainConfig',
     'django.contrib.admin',
     'django.contrib.auth',
-    #"social_django",
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -118,9 +117,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'main.context_processors.menu',
-                #"social_django.context_processors.backends",
-                #"social_django.context_processors.login_redirect",
+                'main.context_processors.menu'
             ],
         },
     },
